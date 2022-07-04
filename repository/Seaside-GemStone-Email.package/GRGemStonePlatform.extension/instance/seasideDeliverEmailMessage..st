@@ -50,3 +50,7 @@ seasideDeliverEmailMessage: aWAEmailMessage
     text:
         (String streamContents: [ :aStream | aWAEmailMessage writeBodyOn: aStream ]).	"We must delegate to #writeBodyOn: as such method knows how to deal with both, single and multipart emails"
   client send
+    ifFalse: [ 
+      self
+        error:
+          'Error while sending email with SendMail class. See ObjectLog for more details.' ]
