@@ -1,7 +1,7 @@
 *seaside-gemstone-email
 seasideDeliverEmailMessage: aWAEmailMessage
   | client stream headers |
-  client := SendMail new.	"user login information if applicable"
+  client := WABetterGsSendMail new.	"user login information if applicable"
   self seasideSmtpUsername
     ifNotNilDo: [ :username | 
       client user: username.
@@ -33,6 +33,7 @@ seasideDeliverEmailMessage: aWAEmailMessage
     mailhostName: self seasideSmtpServer;
     smtpPort: self seasideSmtpPort;
     from: aWAEmailMessage from address greaseString;
+    fromName: aWAEmailMessage from username greaseString;
     rcptTo: aWAEmailMessage recipientsAddresses;
     to:
         (String

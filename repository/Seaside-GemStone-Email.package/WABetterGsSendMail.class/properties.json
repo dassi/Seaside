@@ -1,0 +1,28 @@
+{
+	"category" : "Seaside-GemStone-Email",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Preference" ],
+	"commentStamp" : "AndreasBrodbeck 12/13/2023 16:13",
+	"instvars" : [
+		"mailhostName",
+		"smtpPort",
+		"ownDomainName",
+		"from",
+		"fromName",
+		"to",
+		"cc",
+		"subject",
+		"headers",
+		"text",
+		"contentType",
+		"plainMessage",
+		"rcptTo",
+		"user",
+		"password" ],
+	"name" : "WABetterGsSendMail",
+	"pools" : [
+		 ],
+	"super" : "GsSocket",
+	"type" : "normal" }
